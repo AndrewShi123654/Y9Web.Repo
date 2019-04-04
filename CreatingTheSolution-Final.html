@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<style>
+.butto {
+  background-color: #B56357;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+font-size: 20px;
+  cursor: pointer;width:100%;
+}
+</style>
+<style>
+	body{
+	background-color: #031424;
+}
+	</style>
+<style>
+#more {display: none;}
+</style>
+<script>
+function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+</script>
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #AF473C;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 20%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 200%;
+}
+
+#Home {background-color: #6B7A8F;}
+#News {background-color: #031424;}
+#Contact {background-color:#031424;}
+#About {background-color: #30415D;}
+#Source {background-color: #30415D;}
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Home', this, '#6B7A8F')">Introduction</button>
+<button class="tablink" onclick="openPage('News', this, '#031424')" >Statistics</button>
+<button class="tablink" onclick="openPage('Contact', this, '#031424')">Questions</button>
+<button class="tablink" id="defaultOpen"onclick="openPage('About', this, '#30415D')">Find Help</button>
+<button class="tablink" onclick="openPage('Source', this, '#30415D')">Sources</button>
+
+<div id="Home" class="tabcontent">
+	<style>
+	* {box-sizing: border-box}
+	body {font-family: Verdana, sans-serif; margin:0}
+	.mySlides {display: none}
+	img {vertical-align: middle;}
+
+	/* Slideshow container */
+	.slideshow-container {
+	  max-width: 1000px;
+	  position: relative;
+	  margin: auto;
+	}
+
+	/* Next & previous buttons */
+	.prev, .next {
+	  cursor: pointer;
+	  position: absolute;
+	  top: 50%;
+	  width: auto;
+	  padding: 0px;
+	  margin-top: -22px;
+	  color: white;
+	  font-weight: bold;
+	  font-size: 18px;
+	  transition: 0.6s ease;
+	  border-radius: 0 3px 3px 0;
+	  user-select: none;
+	}
+
+	/* Position the "next button" to the right */
+	.next {
+	  right: 0;
+	  border-radius: 3px 0 0 3px;
+	}
+
+	/* On hover, add a black background color with a little bit see-through */
+	.prev:hover, .next:hover {
+	  background-color: rgba(0,0,0,0.8);
+	}
+
+	/* Caption text */
+	.text {
+	  color: #f2f2f2;
+	  font-size: 15px;
+	  padding: 8px 12px;
+	  position: absolute;
+	  bottom: 8px;
+	  width: 100%;
+	  text-align: center;
+	}
+
+	/* Number text (1/3 etc) */
+	.numbertext {
+	  color: #f2f2f2;
+	  font-size: 12px;
+	  padding: 8px 12px;
+	  position: absolute;
+	  top: 0;
+	}
+
+	/* The dots/bullets/indicators */
+	.dot {
+	  cursor: pointer;
+	  height: 15px;
+	  width: 15px;
+	  margin: 0 2px;
+	  background-color: #bbb;
+	  border-radius: 50%;
+	  display: inline-block;
+	  transition: background-color 0.6s ease;
+	}
+
+	.active, .dot:hover {
+	  background-color: #717171;
+	}
+
+	/* Fading animation */
+	.fade {
+	  -webkit-animation-name: fade;
+	  -webkit-animation-duration: 1.5s;
+	  animation-name: fade;
+	  animation-duration: 1.5s;
+	}
+
+	@-webkit-keyframes fade {
+	  from {opacity: .4} 
+	  to {opacity: 1}
+	}
+
+	@keyframes fade {
+	  from {opacity: .4} 
+	  to {opacity: 1}
+	}
+
+	/* On smaller screens, decrease text size */
+	@media only screen and (max-width: 300px) {
+	  .prev, .next,.text {font-size: 11px}
+	}
+	</style>
+
+	<style>
+	  font-family: Arial;
+	  margin: 0;
+	}
+
+	* {
+	  box-sizing: border-box;
+	}
+
+	img {
+	  vertical-align: middle;
+	}
+
+	/* Position the image container (needed to position the left and right arrows) */
+	.container {
+	  position: relative;
+	}
+
+	/* Hide the images by default */
+	.mySlides {
+	  display: none;
+	}
+
+	/* Add a pointer when hovering over the thumbnail images */
+	.cursor {
+	  cursor: pointer;
+	}
+
+	/* Next & previous buttons */
+	.prev,
+	.next {
+	  cursor: pointer;
+	  position: absolute;
+	  top: 40%;
+	  width: auto;
+	  padding: 16px;
+	  margin-top: -50px;
+	  color: white;
+	  font-weight: bold;
+	  font-size: 20px;
+	  border-radius: 0 3px 3px 0;
+	  user-select: none;
+	  -webkit-user-select: none;
+	}
+
+	/* Position the "next button" to the right */
+	.next {
+	  right: 0;
+	  border-radius: 3px 0 0 3px;
+	}
+
+	/* On hover, add a black background color with a little bit see-through */
+	.prev:hover,
+	.next:hover {
+	  background-color: rgba(0, 0, 0, 0.8);
+	}
+
+	/* Number text (1/3 etc) */
+	.numbertext {
+	  color: #f2f2f2;
+	  font-size: 12px;
+	  padding: 8px 12px;
+	  position: absolute;
+	  top: 0;
+	}
+
+	/* Container for image text */
+	.caption-container {
+	  text-align: center;
+	  background-color: #222;
+	  padding: 2px 16px;
+	  color: white;
+	}
+
+	.row:after {
+	  content: "";
+	  display: table;
+	  clear: both;
+	}
+
+	/* Six columns side by side */
+	.column {
+	  float: left;
+	  width: 16.66%;
+	}
+
+	/* Add a transparency effect for thumnbail images */
+	.demo {
+	  opacity: 0.6;
+	}
+
+	.active,
+	.demo:hover {
+	  opacity: 1;
+	}
+	</style>
+	<body>
+
+
+	<div class="container">
+	  <div class="mySlides">
+	    <div class="numbertext">1 / 5</div>
+	    <img src="11.jpeg" style="width:100%">
+	  </div>
+
+	  <div class="mySlides">
+	    <div class="numbertext">2 / 5</div>
+	    <img src="12.jpeg" style="width:100%">
+	  </div>
+
+	  <div class="mySlides">
+	    <div class="numbertext">3 / 5</div>
+	    <img src="13.jpeg" style="width:100%">
+	  </div>
+    
+	  <div class="mySlides">
+	    <div class="numbertext">4 / 5</div>
+	    <img src="14.jpeg" style="width:100%">
+	  </div>
+
+	  <div class="mySlides">
+	    <div class="numbertext">5 / 5</div>
+	    <img src="15.jpeg" style="width:100%">
+	  </div>
+    
+
+    
+	  <a class="prev" onclick="plusSlides(-1)">❮</a>
+	  <a class="next" onclick="plusSlides(1)">❯</a>
+
+	  <div class="caption-container">
+	    <p id="caption"></p>
+	  </div>
+
+	  <div class="row">
+	    <div class="column">
+	      <img class="demo cursor" src="11.jpeg" style="width:100%" onclick="currentSlide(1)" alt="Domestic/dating violence is a pattern of controlling behaviors that one partner uses to get power over the other. Including: physical violence or threat of physical violence to get control, emotional or mental abuse and sexual abuse.">
+	    </div>
+	    <div class="column">
+	      <img class="demo cursor" src="12.jpeg" style="width:100%" onclick="currentSlide(2)" alt="1/4 of women worldwide will experience domestic/dating violence in their lifetime. Women between the ages of 20 to 24 are at greatest risk of becoming victims of domestic violence.">
+	    </div>
+	    <div class="column">
+	      <img class="demo cursor" src="13.jpeg" style="width:100%" onclick="currentSlide(3)" alt="The costs of domestic violence amount to more than $37 billion a year in law enforcement involvement, legal work, medical and mental health treatment, and lost productivity at companies.">
+	    </div>
+	    <div class="column">
+	      <img class="demo cursor" src="14.jpeg" style="width:100%" onclick="currentSlide(4)" alt="Domestic violence is the leading cause of injury to women – more than car accidents, muggings, and rapes combined.1/2 of all homeless women and children in the U.S. are fleeing from domestic violence.">
+	    </div>
+	    <div class="column">
+	      <img class="demo cursor" src="15.jpeg" style="width:100%" onclick="currentSlide(5)" alt="In 60% to 80% of intimate partner homicides, no matter which partner was killed, the man physically abused the woman before the murder.85% of domestic violence victims are women.">
+	    </div>    
+
+	    </div>
+	  
+	</div>
+
+	<script>
+	var slideIndex = 1;
+	showSlides(slideIndex);
+
+	function plusSlides(n) {
+	  showSlides(slideIndex += n);
+	}
+
+	function currentSlide(n) {
+	  showSlides(slideIndex = n);
+	}
+
+	function showSlides(n) {
+	  var i;
+	  var slides = document.getElementsByClassName("mySlides");
+	  var dots = document.getElementsByClassName("demo");
+	  var captionText = document.getElementById("caption");
+	  if (n > slides.length) {slideIndex = 1}
+	  if (n < 1) {slideIndex = slides.length}
+	  for (i = 0; i < slides.length; i++) {
+	      slides[i].style.display = "none";
+	  }
+	  for (i = 0; i < dots.length; i++) {
+	      dots[i].className = dots[i].className.replace(" active", "");
+	  }
+	  slides[slideIndex-1].style.display = "block";
+	  dots[slideIndex-1].className += " active";
+	  captionText.innerHTML = dots[slideIndex-1].alt;
+	}
+	</script>
+	
+	
+  <h4>INTRODUCTION</h4>
+  <p><p>It is estimated that 35 per cent of women worldwide have experienced either physical and/or sexual intimate partner violence or sexual violence by a non-partner (not including sexual harassment) at some point in their lives. However, some national studies show that up to 70 per cent of women have experienced physical and/or sexual violence from an intimate partner in their lifetime. Evidence shows that women who have experienced physical or sexual intimate partner violence report higher rates of depression, having an abortion and acquiring HIV, compared to women who have not. <br><br>Similar to data from other regions, in all four countries of a multi-country study from the Middle East and North Africa, men who witnessed their fathers using violence against their mothers, and men who experienced some form of violence at home as children, were significantly more likely to report perpetrating intimate partner violence in their adult relationships. For example, in Lebanon the likelihood of perpetrating physical violence was more than three times higher among men who had witnessed their fathers beating their mothers during childhood than those who did not.<br><br>Adult women account for 51 per cent of all human trafficking victims detected globally. Women and girls together account for 71 per cent, with girls representing nearly three out of every four child trafficking victims. Nearly three out of every four trafficked women and girls are trafficked for the purpose of sexual exploitation<span id="dots">...</span><span id="more"><br><br>It is estimated that of the 87,000 women who were intentionally killed in 2017 globally, more than half (50,000- 58 per cent) were killed by intimate partners or family members, meaning that 137 women across the world are killed by a member of their own family every day. More than a third (30,000) of the women intentionally killed in 2017 were killed by their current or former intimate partner <br><br>It is estimated that there are 650 million women and girls in the world today who were married before age 18. During the past decade, the global rate of child marriage has declined—from one in four young women (aged 20-24) being married as children, to almost one in five. Still, in West and Central Africa—where this harmful practice is most common—over four out of 10 young women were married before their 18th Child marriage often results in early pregnancy and social isolation, interrupts schooling, limits the girl’s opportunities and increases her risk of experiencing domestic violence</span></p>
+
+<button class="butto"onclick="myFunction()" id="myBtn">Read more</button></p>
+</div>
+
+<div id="News" class="tabcontent">
+  <h3>Intimate Partner Violence Throughtout the world</h3>
+  
+  
+  
+  
+  
+  
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;}
+.tg .tg-kwiq{color:#000000;border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-ml2k{color:#000000;border-color:inherit;text-align:center;vertical-align:top}
+</style>
+<table style="undefined;table-layout: fixed; width: 1403px">
+<colgroup>
+<col style="width: 400px">
+<col style="width: 1003px">
+</colgroup>
+  
+  <table class="tg">
+    <tr>
+      <th class="tg-ml2k">
+      	
+		<canvas id="canvas" width=400 height=400></canvas>	
+		  <style>
+		        canvas{
+		               background-color:#031424; 
+		               }
+		
+		</style>
+		
+    <div class="btn-group">
+      <button class="previous" onclick="prev();">&laquo; Previous</button>
+      <button class="button"onclick="next();">Next &raquo;</button>
+  
+    </div>	
+      </th>
+      <th class="tg-kwiq">
+      	
+		
+		
+		<button class="button button1" onclick=con1()>WORLD</button>
+		<button class="mutton mutton1" >30%</button>
+		<br><br><br>
+		<button class="button button2" onclick=con2()>Asia Pacific</button>
+		<button class="mutton mutton2" >28.5%</button>
+		<br><br><br>
+		<button class="button button3" onclick=con3()>Central Asia</button>
+		<button class="mutton mutton3" >22.9%</button>
+		<br><br><br>
+		<button class="button button4" onclick=con4()>East Asia</button>
+		<button class="mutton mutton4" >16.3%</button>
+		<br><br><br><button class="button button5" onclick=con5()>Souh Asia</button>
+		<button class="mutton mutton5" >41.7%</button>
+		<br><br><br><button class="button button6" onclick=con6()>Southeast Asia</button>
+		<button class="mutton mutton6" >28%</button>
+		<br><br><br><button class="button button7" onclick=con7()>Australasia</button>
+		<button class="mutton mutton7" >28.3%</button>
+		<br><br><br><button class="button button8" onclick=con8()>Caribbean</button>
+		<button class="mutton mutton8" >27.1%</button>
+		<br><br><br><button class="button button9" onclick=con9()>Central Europe</button>
+		<button class="mutton mutton9" >27.8%</button>
+		<br><br><br><button class="button button10" onclick=con10()>Eastern Europe</button><button class="mutton mutton10" >26.1%</button>
+		<br><br><br><button class="button button11" onclick=con11()>Western Europe</button><button class="mutton mutton11" >19.3%</button>
+		<br><br><br><button class="button button12" onclick=con12()>Adean Latin America</button><button class="mutton mutton12" >40.6%</button>
+		<br><br><br><button class="button button13" onclick=con13()>Central Latin America</button><button class="mutton mutton13" >29.5%</button>
+		<br><br><br><button class="button button14" onclick=con14()>Southern Latin America</button><button class="mutton mutton14" >23.7%</button>
+		<br><br><br><button class="button button15" onclick=con15()>Tropical Latin America</button><button class="mutton mutton15" >27.4%</button>
+		<br><br><br><button class="button button16" onclick=con16()>North Africa and Middle East</button><button class="mutton mutton16" >35.4%</button>
+		<br><br><br><button class="button button17" onclick=con17()>North America</button><button class="mutton mutton17" >21.3%</button>
+		<br><br><br><button class="button button18" onclick=con18()>Oceania</button><button class="mutton mutton18" >35.3%</button>
+		<br><br><br><button class="button button19" onclick=con19()>Central Sub-Saharan Africa</button><button class="mutton mutton19" >65.6%</button>
+		<br><br><br><button class="button button20" onclick=con20()>East Sub-Saharan Africa</button><button class="mutton mutton20" >38.8%</button>
+		<br><br><br><button class="button button21" onclick=con21()>Southern Sub-Saharan Africa</button><button class="mutton mutton21" >29.7%</button>
+		<br><br><br><button class="button button22" onclick=con22()>West Sub-Saharan Africa</button><button class="mutton mutton22" >41.7%</button>
+		</th>
+			  </tr>
+			</table>
+		
+		
+		
+      </th>
+    </tr>
+  </table>
+</div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+			   
+
+  
+  <style>
+  .btn-group .button {
+    background-color: #CF6766; /* Green */
+    border: 1px solid black;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    float: left;
+  }
+  .btn-group .previous {
+    background-color: #6B7A8F; /* Green */
+    border: 1px solid black;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    float: left;
+  }
+  .btn-group .previous:hover {
+    background-color: #945d60;
+    }
+  .btn-group .button:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+  }
+
+  .btn-group .button:hover {
+    background-color:  #945D60;
+  }
+  </style>
+
+
+
+
+
+  
+<script src="data1.json"></script>
+
+
+	
+	
+<script>
+	var a=0;
+	function next(){
+		a=a+1;
+		if(a==22){
+			a=0;	
+		}
+		values=[data[a],100-data[a]];
+		colors=['#CF6766','#30415D','orange'];
+		labels=[datanames[a],'Robot','Mandatory'];
+		dmbChart(175,175,150,50,values,colors,labels,0);
+	}
+	function prev(){
+		a=a-1;
+		if(a==-1){
+			a=21;
+		}
+		values=[data[a],100-data[a]];
+		colors=['#CF6766','#30415D','orange'];
+		labels=[datanames[a],'Robot','Mandatory'];
+		dmbChart(175,175,150,50,values,colors,labels,0);
+	}
+
+	function con1(){
+		a=0;
+		if(a==22){
+			a=0;	
+		}
+		values=[data[a],100-data[a]];
+		colors=['#CF6766','#30415D','orange'];
+		labels=[datanames[a],'Robot','Mandatory'];
+		dmbChart(175,175,150,50,values,colors,labels,0);
+	}
+	function con2(){
+		a=1;
+		if(a==22){
+			a=0;	
+		}
+		values=[data[a],100-data[a]];
+		colors=['#CF6766','#30415D','orange'];
+		labels=[datanames[a],'Robot','Mandatory'];
+	dmbChart(175,175,150,50,values,colors,labels,0);
+	}
+	function con3(){
+		a=2;
+		if(a==22){
+			a=0;	
+		}
+		values=[data[a],100-data[a]];
+		colors=['#CF6766','#30415D','orange'];
+		labels=[datanames[a],'Robot','Mandatory'];
+	dmbChart(175,175,150,50,values,colors,labels,0);
+	}
+	function con4(){
+		a=3;
+		if(a==22){
+			a=0;	
+		}
+		values=[data[a],100-data[a]];
+		colors=['#CF6766','#30415D','orange'];
+		labels=[datanames[a],'Robot','Mandatory'];
+	dmbChart(175,175,150,50,values,colors,labels,0);
+	}
+	function con5(){
+		a=4;
+		if(a==22){
+			a=0;	
+		}
+		values=[data[a],100-data[a]];
+		colors=['#CF6766','#30415D','orange'];
+		labels=[datanames[a],'Robot','Mandatory'];
+	dmbChart(175,175,150,50,values,colors,labels,0);
+	}
+	function con6(){
+		a=5;
+		if(a==22){
+			a=0;	
+		}
+		values=[data[a],100-data[a]];
+		colors=['#CF6766','#30415D','orange'];
+		labels=[datanames[a],'Robot','Mandatory'];
+	dmbChart(175,175,150,50,values,colors,labels,0);
+	}
+	function con7(){
+		a=6;
+		if(a==22){
+			a=0;	
+		}
+		values=[data[a],100-data[a]];
+		colors=['#CF6766','#30415D','orange'];
+		labels=[datanames[a],'Robot','Mandatory'];
+	dmbChart(175,175,150,50,values,colors,labels,0);
+	}
+	function con8(){
+		a=7;
+		if(a==22){
+			a=0;	
+		}
+		values=[data[a],100-data[a]];
+		colors=['#CF6766','#30415D','orange'];
+		labels=[datanames[a],'Robot','Mandatory'];
+	dmbChart(175,175,150,50,values,colors,labels,0);
+	}
+	function con9(){
+		a=8;
+		if(a==22){
+			a=0;	
+		}
+		values=[data[a],100-data[a]];
+		colors=['#CF6766','#30415D','orange'];
+		labels=[datanames[a],'Robot','Mandatory'];
+	dmbChart(175,175,150,50,values,colors,labels,0);
+	}
+	function con10(){
+		a=9;
+		if(a==22){
+			a=0;	
+		}
+		values=[data[a],100-data[a]];
+		colors=['#CF6766','#30415D','orange'];
+		labels=[datanames[a],'Robot','Mandatory'];
+	dmbChart(175,175,150,50,values,colors,labels,0);
+	}
+	function con11(){
+		a=10;
+		if(a==22){
+			a=0;	
+		}
+		values=[data[a],100-data[a]];
+		colors=['#CF6766','#30415D','orange'];
+		labels=[datanames[a],'Robot','Mandatory'];
+	dmbChart(175,175,150,50,values,colors,labels,0);
+	}
+	function con12(){
+		a=11;
+		if(a==22){
+			a=0;	
+		}
+		values=[data[a],100-data[a]];
+		colors=['#CF6766','#30415D','orange'];
+		labels=[datanames[a],'Robot','Mandatory'];
+	dmbChart(175,175,150,50,values,colors,labels,0);
+	}
+	function con13(){
+		a=12;
+		if(a==22){
+			a=0;	
+		}
+		values=[data[a],100-data[a]];
+		colors=['#CF6766','#30415D','orange'];
+		labels=[datanames[a],'Robot','Mandatory'];
+	dmbChart(175,175,150,50,values,colors,labels,0);
+	}
+	function con14(){
+		a=13;
+		if(a==22){
+			a=0;	
+		}
+		values=[data[a],100-data[a]];
+		colors=['#CF6766','#30415D','orange'];
+		labels=[datanames[a],'Robot','Mandatory'];
+	dmbChart(175,175,150,50,values,colors,labels,0);
+	}
+	function con15(){
+		a=14;
+		if(a==22){
+			a=0;	
+		}
+		values=[data[a],100-data[a]];
+		colors=['#CF6766','#30415D','orange'];
+		labels=[datanames[a],'Robot','Mandatory'];
+	dmbChart(175,175,150,50,values,colors,labels,0);
+	}
+	function con16(){
+		a=15;
+		if(a==22){
+			a=0;	
+		}
+		values=[data[a],100-data[a]];
+		colors=['#CF6766','#30415D','orange'];
+		labels=[datanames[a],'Robot','Mandatory'];
+	dmbChart(175,175,150,50,values,colors,labels,0);
+	}
+	function con17(){
+		a=16;
+		if(a==22){
+			a=0;	
+		}
+		values=[data[a],100-data[a]];
+		colors=['#CF6766','#30415D','orange'];
+		labels=[datanames[a],'Robot','Mandatory'];
+	dmbChart(175,175,150,50,values,colors,labels,0);
+	}
+	function con18(){
+		a=17;
+		if(a==22){
+			a=0;	
+		}
+		values=[data[a],100-data[a]];
+		colors=['#CF6766','#30415D','orange'];
+		labels=[datanames[a],'Robot','Mandatory'];
+	dmbChart(175,175,150,50,values,colors,labels,0);
+	}
+	function con19(){
+		a=18;
+		if(a==22){
+			a=0;	
+		}
+		values=[data[a],100-data[a]];
+		colors=['#CF6766','#30415D','orange'];
+		labels=[datanames[a],'Robot','Mandatory'];
+	dmbChart(175,175,150,50,values,colors,labels,0);
+	}
+
+	function con20(){
+		a=19;
+		if(a==22){
+			a=0;	
+		}
+		values=[data[a],100-data[a]];
+		colors=['#CF6766','#30415D','orange'];
+		labels=[datanames[a],'Robot','Mandatory'];
+	dmbChart(175,175,150,50,values,colors,labels,0);
+	}
+	function con21(){
+		a=20;
+		if(a==22){
+			a=0;	
+		}
+		values=[data[a],100-data[a]];
+		colors=['#CF6766','#30415D','orange'];
+		labels=[datanames[a],'Robot','Mandatory'];
+	dmbChart(175,175,150,50,values,colors,labels,0);
+	}
+	function con22(){
+		a=21;
+		if(a==22){
+			a=0;	
+		}
+		values=[data[a],100-data[a]];
+		colors=['#CF6766','#30415D','orange'];
+		labels=[datanames[a],'Robot','Mandatory'];
+	dmbChart(175,175,150,50,values,colors,labels,0);
+	}
+	var canvas=document.getElementById("canvas");
+	var ctx=canvas.getContext("2d");
+	var data=[]
+	for(i=0;i<data1.length;i++){
+		data.push(parseInt(data1[i].dims.YEAR));
+		
+	}
+	var datanames=[];
+	for(i=0;i<data1.length;i++){
+		datanames.push((data1[i].dims.GBDREGION));
+		
+	}
+	colors=['#CF6766','#30415D','orange'];
+	var values=[data[a],100-data[a]];
+	var labels=[datanames[a],'Robot','Mandatory'];
+
+	dmbChart(175,175,150,50,values,colors,labels,0);
+
+	function dmbChart(cx,cy,radius,arcwidth,values,colors,labels,selectedValue){
+	    var tot=0;
+	    var accum=0;
+	    var PI=Math.PI;
+	    var PI2=PI*2;
+	    var offset=-PI/2;
+	    ctx.lineWidth=arcwidth;
+	    for(var i=0;i<values.length;i++){tot+=values[i];}
+	    for(var i=0;i<values.length;i++){
+	        ctx.beginPath();
+	        ctx.arc(cx,cy,radius,
+	            offset+PI2*(accum/tot),
+	            offset+PI2*((accum+values[i])/tot)
+	        );
+	        ctx.strokeStyle=colors[i];
+	        ctx.stroke();
+	        accum+=values[i];
+	    }
+	    var innerRadius=radius-arcwidth-3;
+	    ctx.beginPath();
+	    ctx.arc(cx,cy,innerRadius,0,PI2);
+	    ctx.fillStyle=colors[selectedValue];
+	    ctx.fill();
+	    ctx.textAlign='center';
+	    ctx.textBaseline='bottom';
+	    ctx.fillStyle='black';
+	    ctx.font=(innerRadius)+'px verdana';
+	    ctx.fillText(values[selectedValue],cx,cy+innerRadius*.9);
+	    ctx.font=(innerRadius/8)+'px verdana';
+	    ctx.fillText(labels[selectedValue],cx,cy-innerRadius*.25);
+	}
+	</script>
+
+	
+	
+	
+	<style>
+	.button {
+
+		  float: left;
+	  background-color:#CF6766; /* Green */
+	  border: none;
+	  color: white;
+	  padding: 9px 32px;
+	  text-align: center;
+	  text-decoration: none;
+	  display: inline-block;
+	  font-size: 12px;
+	  margin: 0px 0px;
+	  cursor: pointer;
+	}
+
+	button:focus{
+	   background:#FF533D;
+	}
+
+
+	.button1{width: 270px}
+	.button2{width: 28.5%}
+	.button3{width: 22.9%}
+	.button4{width: 16.3%}
+	.button5{width: 41.7%}
+	.button6{width: 28%}
+	.button7{width: 28.3%}
+	.button8{width: 27.1%}
+	.button9{width: 27.8%}
+	.button10{width: 26.1%}
+	.button11{width: 19.3%}
+	.button12{width: 40.6%}
+	.button13{width: 29.5%}
+	.button14{width: 23.7%}
+	.button15{width: 27.4%}
+	.button16{width: 35.4%}
+	.button17{width: 21.3%}
+	.button18{width: 35.3%}
+	.button19{width: 65.6%}
+	.button20{width: 38.8%}
+	.button21{width: 29.7%}
+	.button22{width: 41.7%}
+
+	.mutton {
+
+		  float: left;
+	  background-color: #6B7A8F; /* Green */
+	  border: none;
+	  color: white;
+	  padding: 9px 32px;
+	  text-align: center;
+	  text-decoration: none;
+	  display: inline-block;
+	  font-size: 12px;
+	  margin: 0px 0px;
+	  cursor: pointer;
+	}
+
+
+	.mutton1{width: 630px}
+	.mutton2{width: 71.5%}
+	.mutton3{width: 77.1%}
+	.mutton4{width: 83.7%}
+	.mutton5{width: 58.3%}
+	.mutton6{width: 72.0%}
+	.mutton7{width: 71.7%}
+	.mutton8{width: 72.9%}
+	.mutton9{width: 72.2%}
+	.mutton10{width: 73.9%}
+	.mutton11{width: 80.7%}
+	.mutton12{width: 59.4%}
+	.mutton13{width: 70.5%}
+	.mutton14{width: 76.3%}
+	.mutton15{width: 72.6%}
+	.mutton16{width: 64.6%}
+	.mutton17{width: 78.7%}
+	.mutton18{width: 64.7%}
+	.mutton19{width: 34.4%}
+	.mutton20{width: 61.2%}
+	.mutton21{width: 70.3%}
+	.mutton22{width: 58.3%}
+	</style>
+
+</div>
+
+
+
+
+		
+		
+<div id="Contact" class="tabcontent">
+     <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .flip-card {
+      background-color: transparent;
+      width: 100%;
+      height: 100px;
+      perspective: 1000px;
+    }
+
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.9s;
+      transform-style: preserve-3d;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    }
+
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+    }
+
+    .flip-card-front {
+      background-color: #AF473C;
+      color: White;
+      z-index: 2;
+    }
+
+    .flip-card-back {
+      background-color: #CF6766;
+      color: white;
+      font-size: 13px;
+      transform: rotateY(180deg);
+  
+      z-index: 1;
+    }
+    </style>
+
+
+
+    <h1>Common Questions</h1>
+    <h2>Intimate gender violence in the 21st century</h2>
+
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+           <h3><br>What is domestic violence?</h3> 
+      
+        </div>
+        <div class="flip-card-back">
+      
+          <p>
+          <br>Domestic violence is intentional and persistent abusive behaviour which is based on an unequal position of power and control. Domestic violence can include a range of behaviours used by one person to control another with whom they have, or have had, a close or family relationship.</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+           <h3><br>How common is domestic violence?</h3> 
+      
+        </div>
+        <div class="flip-card-back">
+      
+          <p>
+          <br><br>Research has shown that approximately one in four women have or currently experience domestic violence. It is therefore very common. Statistics highlight the prevalence of the issue in Northern Ireland. Additional information on children, young people and domestic violence highlights their experiences.</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+           <h3><br>Do abusers show any potential warning signs?</h3> 
+      
+        </div>
+        <div class="flip-card-back">
+      
+          <p>
+          There is no way to spot an abuser in a crowd, but most abusers share some common characteristics.
+    Some of the subtle warning signs include:
+    They insist on moving too quickly into a relationship.
+    They can be very charming and may seem too good to be true.
+    They insist that you stop participating in leisure activities or spending time with family and friends.
+    They do not take responsibility for their actions and blame others for everything that goes wrong.
+    They criticize their partner’s appearance and make frequent put-downs.
+    </p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="flip-card">
+
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+           <h3><br>Is it possible for abusers to change?</h3> 
+      
+        </div>
+        <div class="flip-card-back">
+      
+          <p>
+          <br>Yes, but they must make the choice to change.
+    It’s not easy for an abuser to stop abusive behavior, and it requires a serious decision to change.  Once an abuser has had all of the power in a relationship, it’s difficult to change to a healthy relationship with equal power and compromises.
+    </p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="flip-card">
+
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+           <h3><br>What can I do to help?</h3> 
+      
+        </div>
+        <div class="flip-card-back">
+      
+          <p>
+          <br>Everyone can speak out against domestic violence. The problem will continue until society stands up with one resounding voice and says, “no more!”
+    Members of the public can donate to local, statewide or national anti-domestic violence programs or victim assistance programs.
+    We can teach our children about what healthy relationships look like by example and by talking about it.
+    You can call on your public officials to support life-saving domestic violence services and hold perpetrators accountable.
+    </p>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div id="About" class="tabcontent">
+
+
+<style>
+	.sutton {
+	  background-color: #6B7A8F; /* Green */
+	  border: none;
+	  color: white;
+	  text-align: center;
+	  text-decoration: none;
+	  display: inline-block;
+	  font-size: 16px;
+	  
+	  cursor: pointer;
+	  width:33%;
+	  height:16%;
+	}
+	
+.sutton4 {padding: 150px 130px;}
+
+</style>
+
+<button onclick="window.location.href = 'http://www.stopvaw.org/the_international_legal_framework';"class="sutton sutton4">The Advocates<br>For Human Rights</button>
+
+
+
+<button onclick="window.location.href = 'https://www.socialworkdegree.net/domestic-violence-prevention/';"class="sutton sutton4">Social Work<br>Degree</button>
+
+
+<button onclick="window.location.href = 'https://www.acf.hhs.gov/fysb/resource/help-fv';"class="sutton sutton4">The Family and Youth<br>service board</button>
+
+<br>
+<br>
+
+<button onclick="window.location.href = 'https://ncadv.org/resources"class="sutton sutton4">NCADV</button>
+
+
+<button onclick="window.location.href = 'https://ojp.gov/ovc/';"class="sutton sutton4">Office For<br> Victms of Crime</button>
+
+
+<button onclick="window.location.href = 'https://www.thehotline.org/resources/';"class="sutton sutton4">National Domestic Violence <br>Hotline</button>
+</div>
+<div id="Source" class="tabcontent">
+  <h3>About</h3>
+  <p>Who we are and what we do.</p>
+  
+  
+  
+  
+  <a href="data (2).json" download>
+    <img src="WHO.png" alt="W3Schools" width="150" height="150">
+  </a>
+  
+  
+  <a href="Answer.html" download>
+    <img src="Justification.png" alt="W3Schools" width="150" height="150">
+  </a>
+  
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+
+</html>
+

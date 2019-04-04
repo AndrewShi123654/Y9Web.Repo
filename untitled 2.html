@@ -1,0 +1,132 @@
+<html>
+<canvas id="canvas" width=325 height=325></canvas>	
+  <style>
+        canvas{
+               background-color:black; 
+               }
+			   
+
+  </style>
+  <style>
+  .btn-group .button {
+    background-color: #F7C331; /* Green */
+    border: 1px solid white;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    float: left;
+  }
+  .btn-group .previous {
+    background-color: #6B7A8F; /* Green */
+    border: 1px solid white;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    float: left;
+  }
+  .btn-group .previous:hover {
+    background-color: gray;
+    }
+  .btn-group .button:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+  }
+
+  .btn-group .button:hover {
+    background-color: #F7882F;
+  }
+  </style>
+  </head>
+  <body>
+
+
+  <div class="btn-group">
+    <button class="previous" onclick="prev();">&laquo; Previous</button>
+    <button class="button"onclick="next();">Next &raquo;</button>
+  
+  </div>
+
+  
+<script src="data1.json"></script>
+
+<script>
+	var a=0;
+	function next(){
+		a=a+1;
+		if(a==22){
+			a=0;	
+		}
+		values=[data[a],100-data[a]];
+		colors=['gold','#6B7A8F','orange'];
+		labels=[datanames[a],'Robot','Mandatory'];
+		dmbChart(150,150,125,25,values,colors,labels,0);
+	}
+	function prev(){
+		a=a-1;
+		if(a==-1){
+			a=21;
+		}
+		values=[data[a],100-data[a]];
+		colors=['gold','#6B7A8F','orange'];
+		labels=[datanames[a],'Robot','Mandatory'];
+		dmbChart(150,150,125,25,values,colors,labels,0);
+	}
+	
+	var canvas=document.getElementById("canvas");
+	var ctx=canvas.getContext("2d");
+	var data=[]
+	for(i=0;i<data1.length;i++){
+		data.push(parseInt(data1[i].dims.YEAR));
+		
+	}
+	var datanames=[];
+	for(i=0;i<data1.length;i++){
+		datanames.push((data1[i].dims.GBDREGION));
+		
+	}
+	var colors=['gold','#6B7A8F','orange'];
+	var values=[data[a],100-data[a]];
+	var labels=[datanames[a],'Robot','Mandatory'];
+
+	dmbChart(150,150,125,25,values,colors,labels,0);
+
+	function dmbChart(cx,cy,radius,arcwidth,values,colors,labels,selectedValue){
+	    var tot=0;
+	    var accum=0;
+	    var PI=Math.PI;
+	    var PI2=PI*2;
+	    var offset=-PI/2;
+	    ctx.lineWidth=arcwidth;
+	    for(var i=0;i<values.length;i++){tot+=values[i];}
+	    for(var i=0;i<values.length;i++){
+	        ctx.beginPath();
+	        ctx.arc(cx,cy,radius,
+	            offset+PI2*(accum/tot),
+	            offset+PI2*((accum+values[i])/tot)
+	        );
+	        ctx.strokeStyle=colors[i];
+	        ctx.stroke();
+	        accum+=values[i];
+	    }
+	    var innerRadius=radius-arcwidth-3;
+	    ctx.beginPath();
+	    ctx.arc(cx,cy,innerRadius,0,PI2);
+	    ctx.fillStyle=colors[selectedValue];
+	    ctx.fill();
+	    ctx.textAlign='center';
+	    ctx.textBaseline='bottom';
+	    ctx.fillStyle='black';
+	    ctx.font=(innerRadius)+'px verdana';
+	    ctx.fillText(values[selectedValue],cx,cy+innerRadius*.9);
+	    ctx.font=(innerRadius/8)+'px verdana';
+	    ctx.fillText(labels[selectedValue],cx,cy-innerRadius*.25);
+	}
+	</script>
+</html>
